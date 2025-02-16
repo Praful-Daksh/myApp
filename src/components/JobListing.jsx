@@ -1,12 +1,13 @@
 import React from 'react'
 
-const JobListing = (job) => {
+const JobListing = (props) => {
+    const {job} = props;
     return (
         <div className="bg-white rounded-xl shadow-md relative">
             <div className="p-4">
                 <div className="mb-6">
                     <div className="text-gray-600 my-2">{job.type}</div>
-                    <h3 className="text-xl font-bold">{job.type}</h3>
+                    <h3 className="text-xl font-bold">{job.company.name}</h3>
                 </div>
                 <div className="mb-5">{job.description}</div>
                 <h3 className="text-indigo-500 mb-2">{job.salary} Per Year</h3>
